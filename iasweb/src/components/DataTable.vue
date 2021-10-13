@@ -109,61 +109,7 @@ export default {
     
     },
     mounted(){
-        // eslint-disable-next-line no-undef
-    //     $.ajax({
-    //         type: "GET",
-    //         url: 'http://localhost:3000/api/productos',
-    //         dataType: 'json',
-    //         success: function(obj){
-    //         // eslint-disable-next-line no-undef
-    //             $('#products').DataTable({
-    //                 data: obj,
-    //                 columns:[
-    //                 { title: 'Imagen', render: function(){
-    //                    return '<img src="https://picsum.photos/200/200" width="100" height="100"/>';
-    //                 } },
-    //                 { data: 'codigo', title: 'Codigo' },
-    //                 { data: 'producto', title: 'Producto' },
-    //                 { data: 'presentacion', title: 'Presentacion' },
-    //                 { data: 'precio', title: 'Precio' },
-    //                 { data: 'descripcion', title: 'Descripción' },
-    //                 {title: 'Editar', 
-    //                 render: function(){
-    //                     return '<a class=" edit btn btn-warning"><i class="fas fa-edit"></i></a>';
-    //                 } },
-    //                 {title: 'Borrar',
-    //                 render: function(){
-    //                     return '<a class="btn btn-danger"><i class="fas fa-trash"></i></a>';
-    //                 }},
-    //                 ],
-    //                 language: {
-    //                     "decimal": "",
-    //                     "emptyTable": "No hay información",
-    //                     "info": "Mostrando _START_ a _END_ de _TOTAL_ Entradas",
-    //                     "infoEmpty": "Mostrando 0 to 0 of 0 Entradas",
-    //                     "infoFiltered": "(Filtrado de _MAX_ total entradas)",
-    //                     "infoPostFix": "",
-    //                     "thousands": ",",
-    //                     "lengthMenu": "Mostrar _MENU_ Entradas",
-    //                     "loadingRecords": "Cargando...",
-    //                     "processing": "Procesando...",
-    //                     "search": "Buscar:",
-    //                     "zeroRecords": "Sin resultados encontrados",
-    //                     "paginate": {
-    //                         "first": "Primero",
-    //                         "last": "Ultimo",
-    //                         "next": "Siguiente",
-    //                         "previous": "Anterior"
-    //                     }},
-    //             });
-            
-    //         },
-    //         error: function(obj){
-    //             alert(obj.msg)
-    //         }
-
-                
-    // })
+        
     
     },
     methods: {
@@ -184,7 +130,6 @@ export default {
             })
         },
         irEditar(row) {
-            //eslint-disable-next-line no-undef
             let ruta = `/editarproducto/${row.codigo}`
             this.$router.push(ruta)
         },

@@ -1,8 +1,16 @@
 <template>
     <div class="contenido">
+        <form class="row col-8 justify-content-center mb-3" style="left: 15%; right : 15%;">
+                    <div class="input-group">
+                        <input type="text" class="form-control search" placeholder="Buscar..." v-model="search">
+                        <div class="input-group-append">
+                            <span class="input-group-text"><i class="fas fa-search"></i></span>
+                        </div>
+                    </div>
+        </form>
             <div class="row">
                 
-                <div v-for="producto in productos" :key="producto.id" class="col justify-content-center">
+                <div v-for="producto in filteredProductos" :key="producto.id" class="col justify-content-center">
                     <div class="card mb-3" style="width: 18rem;">
                         <img class="card-img-top" src="https://picsum.photos/200/200" alt="Card image cap">
                         <div class="card-body">
@@ -28,11 +36,19 @@ import axios from 'axios'
 export default {
     data(){
         return{
-            productos:[]
+            productos:[],
+            search: ""
         }
     },
     created(){
         this.cargarProductos();
+    },
+    computed:{
+    filteredProductos() {
+        return this.productos.filter(producto =>
+            producto.producto.toLowerCase().includes(this.search.toLowerCase())
+        );
+        }
     },
     methods:{
         cargarProductos(){

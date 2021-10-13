@@ -35,14 +35,7 @@
                         <router-link :to="{name: 'quienes'}"><a class="nav-link">Quienes Somos</a></router-link>
                     </li>
             </ul>
-                <form class="form-inline">
-                    <div class="input-group">
-                        <input type="text" class="form-control search" placeholder="Buscar...">
-                        <div class="input-group-append">
-                            <span class="input-group-text"><i class="fas fa-search"></i></span>
-                        </div>
-                    </div>
-                </form>
+                
             </div>
         </nav>
         <hr>
