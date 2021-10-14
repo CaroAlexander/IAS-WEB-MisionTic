@@ -12,11 +12,14 @@ const bp = require('body-parser')
  // Conexión base de datos
 const mongoose = require('mongoose');
 //se requiere moongose
-const uri = 'mongodb://localhost:27017/IASWEB';
+// const uri = 'mongodb://localhost:27017/IASWEB';
 //direccion de la cadena de conexion para conectarse con la base de datos:
 //-con mongodb, la direccion especifica de la base de datos
 //-el puerto
 //-Nombre de base de datos
+
+const uri = 'mongodb+srv://Andresdatab:lRAKMpfC15CxDCxC@cluster0.z2b1m.mongodb.net/tienda_IAS?retryWrites=true&w=majority';
+
 const options = {useNewUrlParser: true, useUnifiedTopology: true};
 //opciones de configuracion de la conexion
 	

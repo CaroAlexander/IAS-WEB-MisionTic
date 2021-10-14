@@ -4,6 +4,7 @@
   "description": "",
   "main": "index.js",
   "scripts": {
+    "start": "babel-node app.js --exec",
     "dev": "nodemon app.js",
     "devbabel": "nodemon app.js --exec babel-node"
   },
@@ -11,6 +12,7 @@
   "author": "",
   "license": "ISC",
   "dependencies": {
+    "babel-cli": "^6.26.0",
     "body-parser": "^1.19.0",
     "connect-history-api-fallback": "^1.6.0",
     "cors": "^2.8.5",

@@ -71,7 +71,7 @@ export default {
     },
     methods: {
         registrarProducto(){
-            axios.post('http://localhost:3000/api/nuevo-producto',
+            axios.post('https://tienda-ias-api.herokuapp.com/api/nuevo-producto',
             {
                 data: this.producto
             })

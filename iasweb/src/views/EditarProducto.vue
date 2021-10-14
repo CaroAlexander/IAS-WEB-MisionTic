@@ -79,7 +79,7 @@ export default {
     },
     methods: {
         cargarProducto(numero){
-            axios.get(`http://localhost:3000/api/inventario/${numero}`)
+            axios.get(`https://tienda-ias-api.herokuapp.com/api/inventario/${numero}`)
             .then(response => {
                 let status_peticion = response.status
                 console.log(status_peticion)
@@ -87,7 +87,7 @@ export default {
             })
         },
         actualizarProducto(){
-            axios.put(`http://localhost:3000/api/inventario-update/${this.productoCargado._id}`,this.productoCargado)
+            axios.put(`https://tienda-ias-api.herokuapp.com/api/inventario-update/${this.productoCargado._id}`,this.productoCargado)
             .then(response => {
                 let status_peticion = response.status
                 if(status_peticion === (200 || 204)) {

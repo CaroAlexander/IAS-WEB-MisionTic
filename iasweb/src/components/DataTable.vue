@@ -114,7 +114,7 @@ export default {
     },
     methods: {
         cargarProductos(){
-            axios.get('http://localhost:3000/api/productos')
+            axios.get('https://tienda-ias-api.herokuapp.com/api/productos')
             .then(response => {
                 let status_peticion = response.status
                 console.log(status_peticion)
@@ -122,7 +122,7 @@ export default {
             })
         },
         buscarCodigo(){
-            axios.get('http://localhost:3000/api/inventario/:codigo')
+            axios.get('https://tienda-ias-api.herokuapp.com/api/inventario/:codigo')
             .then(response => {
                 let status_peticion = response.status
                 console.log(status_peticion)
@@ -144,7 +144,7 @@ export default {
                 confirmButtonText: 'Sí, eliminar'
                 }).then((result) => {
                     if (result.isConfirmed) {
-                        axios.delete(`http://localhost:3000/api/inventario-eliminar/${row._id}`)
+                        axios.delete(`https://tienda-ias-api.herokuapp.com/api/inventario-eliminar/${row._id}`)
                             .then(response => {
                                 let status_peticion = response.status
                                 if (status_peticion === (200||204)) {
