@@ -1,0 +1,138 @@
+{
+	"info": {
+		"_postman_id": "11e49ace-5653-4974-9218-310f12e91ea1",
+		"name": "Pruebas IAS",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "IASWEB",
+			"item": [
+				{
+					"name": "Crear producto",
+					"protocolProfileBehavior": {
+						"disabledSystemHeaders": {}
+					},
+					"request": {
+						"method": "POST",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"producto\" : \"CHAMPU  ALFOMBRAS prueba\",\r\n    \"codigo\" : 17010703,\r\n    \"presentacion\" : \"FCO 1 L\",\r\n    \"precio\" : \"$ 3.500\",\r\n    \"descripcion\" : \"\",\r\n    \"imagen\" : \"\"\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/nuevo-producto",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"nuevo-producto"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Consultar Productos",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/productos",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"productos"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Buscar Producto",
+					"request": {
+						"method": "GET",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/inventario/17030109",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"inventario",
+								"17030109"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Actualizar Producto",
+					"request": {
+						"method": "PUT",
+						"header": [],
+						"body": {
+							"mode": "raw",
+							"raw": "{\r\n    \"codigo\": 17010703,\r\n    \"producto\": \"Potasio Sodico\",\r\n    \"presentacion\": \"Pepe\",\r\n    \"precio\": \"$ 3.500\",\r\n    \"descripcion\": \"\",\r\n    \"imagen\": \"\",\r\n    \"_id\": \"6164ddc75461878a12f41b87\",\r\n    \"__v\": 0\r\n}",
+							"options": {
+								"raw": {
+									"language": "json"
+								}
+							}
+						},
+						"url": {
+							"raw": "http://localhost:3000/api/inventario-update/6164ddc75461878a12f41b87",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"inventario-update",
+								"6164ddc75461878a12f41b87"
+							]
+						}
+					},
+					"response": []
+				},
+				{
+					"name": "Borrar Producto",
+					"request": {
+						"method": "DELETE",
+						"header": [],
+						"url": {
+							"raw": "http://localhost:3000/api/inventario-eliminar/6164bd9a7dba64a6a8b77d5c",
+							"protocol": "http",
+							"host": [
+								"localhost"
+							],
+							"port": "3000",
+							"path": [
+								"api",
+								"inventario-eliminar",
+								"6164bd9a7dba64a6a8b77d5c"
+							]
+						}
+					},
+					"response": []
+				}
+			]
+		}
+	]
+}

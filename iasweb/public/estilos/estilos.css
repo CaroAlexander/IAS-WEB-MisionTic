@@ -1,0 +1,70 @@
+@media only screen and (min-width: 1366px) {
+    .bg-gray{
+        background: #c4c4c4;
+    }
+  }
+
+  @media only screen and (min-width: 1920px) {
+    .search {
+      padding-right: 65rem;
+    }
+  }
+  
+  @media only screen and (max-width: 1366px) {
+    .search {
+      padding-right: 40rem;
+    }
+  }
+
+  @media only screen and (max-width: 428px) {
+    .search {
+      padding-right: 10rem;
+    }
+  }
+
+  aside {
+    width: 15%;    
+    float: left;
+  }
+
+  @media only screen and (min-width: 1920px) {
+    .card {
+      width: 16rem;
+    }
+  }
+
+  @media only screen and (min-width: 375px) {
+    .card {
+      margin-left: auto;
+      margin-right: auto;
+    }
+  }
+
+
+  @media only screen and (min-width: 1360px) {
+    .card-pading {
+      padding-left: auto;
+      margin-right: 5%;
+      margin-bottom: 5%;
+    }
+  }
+
+  @media only screen and (min-width: 1920px) {
+    .card-pading {
+      padding-left: 20%;
+      margin-bottom: 5%;
+    }
+  }
+
+
+  @media only screen and (max-width: 428px) {
+    .pading-aside {
+      padding-right: 3rem;
+    }
+  }
+
+  @media only screen and (max-width: 1366px) {
+    .container {
+      max-width: 1000px;
+    }
+  }
